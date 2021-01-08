@@ -8,7 +8,11 @@ import { NavigationItem } from "../NavigationItems/NavigationItem/NavigationItem
 export const Toolbar = (props) => (
   <header className={classes.Toolbar}>
     <div>MENU</div>
-    <Logo />
-    <NavigationItems />
+    <div className={classes.Logo}>
+      <Logo />
+    </div>
+    <nav className={classes.DesktopOnly}>
+      <NavigationItems />
+    </nav>
   </header>
 );
