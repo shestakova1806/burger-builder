@@ -125,6 +125,10 @@ export class ContactData extends Component {
   checkValidaty = (value, rules) => {
     let isValid = true;
 
+    if (!rules) {
+      return true;
+    }
+
     if (rules.required) {
       isValid = value.trim() !== "" && isValid;
     }
