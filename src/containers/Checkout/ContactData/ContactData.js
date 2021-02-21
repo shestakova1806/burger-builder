@@ -16,6 +16,7 @@ export class ContactData extends Component {
           placeholder: "Your Name",
         },
         value: "",
+        valueType: "name",
         validation: {
           required: true,
         },
@@ -29,6 +30,7 @@ export class ContactData extends Component {
           placeholder: "Street",
         },
         value: "",
+        valueType: "street",
         validation: {
           required: true,
         },
@@ -42,6 +44,7 @@ export class ContactData extends Component {
           placeholder: "ZIP Code",
         },
         value: "",
+        valueType: "ZIP code",
         validation: {
           required: true,
           minLength: 5,
@@ -57,6 +60,7 @@ export class ContactData extends Component {
           placeholder: "Country",
         },
         value: "",
+        valueType: "country",
         validation: {
           required: true,
         },
@@ -70,6 +74,7 @@ export class ContactData extends Component {
           placeholder: "Your Email",
         },
         value: "",
+        valueType: "email",
         validation: {
           required: true,
         },
@@ -168,6 +173,7 @@ export class ContactData extends Component {
             invalid={!formElement.config.valid}
             shouldValidate={formElement.config.validation}
             touched={formElement.config.touched}
+            valueType={formElement.config.valueType}
             changed={(event) => this.inputChangedHandler(event, formElement.id)}
           />
         ))}
